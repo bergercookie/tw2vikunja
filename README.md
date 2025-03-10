@@ -72,19 +72,23 @@ task pro:run export | tw2vikunja
 
 The above should create an output similar to the following, with `taskwarrior` tags
 converted to `*{tag}` and `taskwarrior` projects converted to `+{project}`.
-Dates are written as `DD/MM/YYYY` and times as `at HH:MM`:
+Dates are written as `MM/DD/YYYY` and times as `at HH:MM`:
 
 ```txt
-How many days to stay there? +paris *remindme 30/01/2024 at 00:00
-Book travel tickets +paris *remindme 30/01/2024 at 00:00
+How many days to stay there? +paris *remindme 03/11/2025 at 00:00
+Book travel tickets +paris *remindme 03/12/2025 at 00:00
 Book for holiday on Thursday, Friday and Monday +paris
-Book airbnb +paris *remindme 30/01/2024 at 00:00
-Register for marathon 30/01/2024 at 14:00 +paris
+Book airbnb +paris *remindme 03/13/2025 at 00:00
+Register for marathon 03/14/2024 at 14:00 +paris
 ```
 
 The output can be copy-pasted to the `Vikunja` prompt:
 
-![Vikunja prompt](/share/images/vikunja-prompt-copy-paste.png)
+![Vikunja prompt](/share/images/vikunja-quick-add-prompt.png)
+
+And this is how it looks after the tasks are added:
+
+![Vikunja prompt](/share/images/vikunja-project-view.png)
 
 ### Notes
 

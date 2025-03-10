@@ -44,7 +44,7 @@ def convert_date(date: str, convert_tz_to_local: bool = True) -> str:
         local_tz = datetime.datetime.now().astimezone().tzinfo
         dt = dt.astimezone(local_tz)
 
-    vik_date = f'{dt.strftime("%d/%m/%Y")} at {dt.strftime("%H:%M")}'
+    vik_date = f'{dt.strftime("%m/%d/%Y")} at {dt.strftime("%H:%M")}'
 
     return vik_date
 
