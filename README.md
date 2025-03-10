@@ -7,15 +7,15 @@ Easily convert your [`Taskwarrior`](https://taskwarrior.org/) tasks to
 
 This script is currently not available on PyPi (PRs to convert it to a proper
 package and upload to PyPI are more than welcome). To install it, just download
-the `tw2vikunja` script somewhere locally and, assuming you have
+the `tw2vikunja.py` script somewhere locally and, assuming you have
 [`uv`](https://github.com/astral-sh/uv) installed locally, just execute the
 script
 
 ```sh
-/path/to/tw2vikunja
+/path/to/tw2vikunja.py
 ```
 
-This will install any dependencies of the `tw2vikunja` script (at the time of
+This will install any dependencies of the `tw2vikunja.py` script (at the time of
 writing only the `pyperclip` package), in a dedicated virtual environment and
 will execute the script in that environment.
 
@@ -24,7 +24,7 @@ script directly:
 
 ```sh
 pip install pyperclip
-python3 -m /path/to/tw2vikunja
+python3 -m /path/to/tw2vikunja.py
 ```
 
 ## Usage
@@ -35,27 +35,27 @@ You can find some usage examples by running the script with the `--help` flag:
   `Vikunja` tasks (doesn't include `+WAITING` tasks):
 
   ```sh
-  task status:pending export | tw2vikunja"
+  task status:pending export | tw2vikunja.py"
   ```
 
 - Get all the tasks from the `myproject` project and convert them to `Vikunja`
 
   ```sh
-  task pro:myproject export | tw2vikunja"
+  task pro:myproject export | tw2vikunja.py"
   ```
 
 - Get all the tasks from the `myproject` project and convert them to `Vikunja`,
   but skip converting to the local timezone:
 
   ```sh
-  task pro:myproject export | tw2vikunja --skip-convert-tz"
+  task pro:myproject export | tw2vikunja.py --skip-convert-tz"
   ```
 
 - Get all the tasks from the `myproject` project and convert them to `Vikunja`,
   but skip adding any tags:
 
   ```sh
-  task pro:myproject export | tw2vikunja --skip-tags"
+  task pro:myproject export | tw2vikunja.py --skip-tags"
   ```
 
 Commands like the above (unless a relevant filter is applied) should create a
@@ -67,7 +67,7 @@ facilitate the pasting, the said output is automatically added to the clipboard
 ### Example output
 
 ```sh
-task pro:run export | tw2vikunja
+task pro:run export | tw2vikunja.py
 ```
 
 The above should create an output similar to the following, with `taskwarrior` tags
